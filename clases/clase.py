@@ -32,15 +32,37 @@ string = cadena[1:len(cadena)] #???
 print(string)
 
 # CAST
-numero = str(9)
+numero = str(9) # -> "9"
 print(numero, type(numero)) #Casting
 string_numero = int("14")
 print(string_numero, type(string_numero))
 
-
-
-
 # listas 
 
-lista_1 = [1, 2, 3, 4, 5,]
+# Python -> Dinamicos 
 
+lista_1 = [1, 2.9, 3, 4, 5, 6, "hola mundo", 8, {"a":1, "b":"c"}, [1,2,3]]
+        #   0  1.  2.  3. 4
+        # lista_1[-1] Ducker robbin -> len
+        # listas (iteradora) -> MUTABLES != Inmutable
+
+print(len(lista_1))
+
+lista_1[0] = set()
+
+#print(lista_1[ : : -1])
+# IMPORTANTE
+#lista_1.reverse()
+l = lista_1
+print(l)
+
+# a p 
+
+lista_1.append("0") # añade al final
+print(lista_1)
+lista_1.pop(-2) # remueva el objeto final 
+print(lista_1)
+
+# Diccionarios
+
+# SET 
