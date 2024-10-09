@@ -1,3 +1,6 @@
+# Importar funciones
+from utils import agregar_elemento, eliminar_duplicados
+
 # Ejercicios con listas
 
 # Ejercicio 1: Suma de Elementos de una Lista
@@ -14,13 +17,22 @@ print("Suma de elementos:", sumar_elementos(numeros))  # Salida: 15
 assert sumar_elementos(numeros) == 15
 
 # Ejercicio 2: Añadir un nuevo elemento en la lista
-def agregar_elemento(lista, elemento):
-    # Añadir tu codigo
-    pass   
 # Prueba la función encontrar_maximo
 numeros = [1, 2, 3, 4, 5]
-agregar_elemento(numeros, 6)
+# numeros.append(6)
+numeros = agregar_elemento(numeros, 6)
 assert numeros == [1, 2, 3, 4, 5, 6]
+numeros = agregar_elemento(numeros, 9)
+assert numeros == [1, 2, 3, 4, 5, 6, 9]
+
+strings = ["a", "c", "b", "c", "b", "a"]
+strings = agregar_elemento(strings, "d") # se añade "d" a strings
+# ejericio Extra
+
+strings_sin_duplicados = eliminar_duplicados(strings)
+print(strings_sin_duplicados)
+
+
 
 # Ejercicio 3: Eliminar el primer y ultimo elemento de una lista
 def eliminar_elementos(lista):
