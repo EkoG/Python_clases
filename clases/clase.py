@@ -64,5 +64,37 @@ lista_1.pop(-2) # remueva el objeto final
 print(lista_1)
 
 # Diccionarios
+# key : value
+my_dict = {1:[1,2,3], 2:"string", 3:65, 4:{}} # vacio
+
+diccionario = {}
+
+print(1 in diccionario)
+print(diccionario.get(1)) 
+
+# {status:200, data:[1,nombres, llamadas, celurares]} -> json
+
+coches = {"audi":["a1", "a2", "a3"], "Nissan":["staquitas", "tsurus"], "porche":["cayenne"]}
+# O(n) time complexity -> [elem       ,i,       entos]
+# O(1) inmediato 
+
+
 
 # SET 
+sett = set() # vacío
+set_2 = {1,2,3,4, "hola", 9, "m", 1.3} # Elementos únicos
+print(2 in set_2)
+
+lista = [1,2,2,3,5,5,5,6,4,4,5]
+        # 1 2 3 4
+# casting (convertir una variable a otra)
+print(set(lista))
+print(sett, {1,})
+
+# None -> 
+
+None
+Nan
+
+
+
