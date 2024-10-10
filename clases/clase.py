@@ -93,8 +93,79 @@ print(sett, {1,})
 
 # None -> 
 
-None
-Nan
+# None
+#  Nan
+
+# Tuple -> Tupla (español)
+        # lista inmutable
+        # iterador 
+        # indexado - 0 
+        # primer elemento 0 ultimo elemento len(tupla) - 1
+tupla = ()
+tupla = tuple()
+tupla = (1,) # Pregunta clase par crear tupla de un elemento
+print(type(tupla))
+tupla_2 = (1, None, "string", tuple(), {1,3,4,5})
+print(tupla_2[-1])
+print('')
+# tupla_2[-1] = 90
+# casting
+tupla_3 = tuple(lista_1)
+lista_4 = list(tupla_3)
+
+# LOOP
+# [1, 2, 3]
+# Ejercicio 1: Suma de Elementos de una Lista, retorna el total
+def sumar_elementos(lista: list) -> int:
+    total = 0
+    for numero in lista: #Esto se lee así: "Para cada numero en la lista"
+        total += numero # total = numero + total
+        print(total)
+    return total
 
 
+assert sumar_elementos([1, 3, 5, 9.9, 10.1]) == 29.0
+tupla = ("numero", "nombres", "c", "y", "m") # oracion
+#        0,        1,         2,    3,  4,  
+oracion = ''
+for string in tupla:
+    oracion += string + ' '   #concatenar
+    print(oracion)
+
+lista = [1, 3, 4] # -> 3
+# utilizando for para hacerlo de reversa
+lista.reverse()
+print(lista)
+print(lista[::-1])
+# for utilizando indices
+
+# range
+#                3
+print(range(len(lista))) #desde 0 hasta n - 1
+
+for i in range(10):
+    print(i)
+
+# Acceder ultimo elemento de una lista
+print(lista[-1])
+print(lista[0])
+lista = [1, 3, 4, 6, 7]
+for i in range(len(lista)):
+    print("indice: " + str(i), "valor: " + str(lista[i]))
+
+# reverse a través de swap
+# definir a y b
+# SWAP -> a,b = b,a
+a = 1
+b = 2
+a, b = b, a
+print(a, b)
+
+# EJERCICIO COMPRENDER
+lista = [1, 3, 4, 6, 7, "ga", "m"] 
+# indice 0
+lenght = len(lista)
+for i in range(lenght // 2): # 5 // 2 -> 2 range(2)- > 0 1 # 146, 147
+    lista[i], lista[lenght - 1 - i] = lista[lenght - 1 - i], lista[i] # 158 SWAP
+print(lista)
 
