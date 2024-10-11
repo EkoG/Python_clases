@@ -169,3 +169,30 @@ for i in range(lenght // 2): # 5 // 2 -> 2 range(2)- > 0 1 # 146, 147
     lista[i], lista[lenght - 1 - i] = lista[lenght - 1 - i], lista[i] # 158 SWAP
 print(lista)
 
+# list comprehension
+# 
+lista = [numero**2 for numero in range(1, 11)]
+diccionario_1 = {"a":"b", "c":"m", "Estudiante:":"Celia"} # No tienen un orden (indice) definido
+diccionario = (f'{key}  {value}' for key, value in diccionario_1.items())
+print(diccionario_1.items()) # lista de tuplas -> 
+print(diccionario_1.values()) # lista de tuplas -> 
+print(diccionario_1.keys()) # lista de tuplas 
+nombre = 'Jorge'
+print(f'hola cómo estas {nombre}')
+print(diccionario)
+
+quejas = "NO_ME_LLAMES" # -> "No Me Llames"
+quejas = quejas.split("_")
+print(quejas)
+quejas = [queja.lower() for queja in quejas]
+print(quejas)
+quejas = [queja.capitalize() for queja in quejas]
+print(quejas)
+quejas = " ".join(quejas)
+print(quejas)
+# ------ Duplicado compacto
+quejas = "NO_ME_LLAMES" # -> "No Me Llames"
+quejas = quejas.split("_")
+quejas = " ".join([queja.lower().capitalize() for queja in quejas])
+print(quejas)
+                  
