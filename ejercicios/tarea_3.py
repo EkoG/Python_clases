@@ -19,3 +19,4 @@ for i in range(lenght // 2): # 5 // 2 -> 2 range(2)- > 0 1 # 146, 147 -> pasos q
     # SWAP de valores: 4, 7 = 7, 4
     # lista = ["m", "ga", 7, 6, 4, 3, 1]
 print(lista)
+
