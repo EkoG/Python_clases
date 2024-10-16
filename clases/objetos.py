@@ -2,8 +2,12 @@
 # OOP -> 
 
 # Estudiante -> Persona: sí; 
+genero = ''
+cien_pesos = 100
 class Persona:
+    genero = ''
     def __init__(self, nombre: str, edad: int, estatura: float) -> None: # Dunder -> double underscore
+        genero = ''
         # Metodos magics
         self.nombre = nombre
         self.edad = edad
@@ -38,6 +42,8 @@ class Empleado(Persona):
 empleado_1 = Empleado("Celia", 20, 1.61, 100000.00)
 print(empleado_1)
 
+print(persona_1.edad + cien_pesos)
+print(empleado_1.salario + cien_pesos)
 
 # polimorfismo
 class C:

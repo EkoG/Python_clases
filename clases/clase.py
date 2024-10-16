@@ -196,6 +196,69 @@ quejas = quejas.split("_")
 quejas = " ".join([queja.lower().capitalize() for queja in quejas])
 print(quejas)
 
-# if elif else
-# packaging
+## Operaciones bool
+
+# hint: 
+# True == 1
+# False == 0 == (a veces) None 
+
+print(1 == True) # true
+print(0 == False) # true
+print(True !=  0) # true
+print( 1 <= 0)
+print( 1 >= 0)
+
+# if elif else. ----- switch case
+lista = ["a", "b"]
+if lista: #len(lista) > 0: #comparacion
+    print (lista)
+elif 'a' in lista:
+    print(f'esta lista contiene a {" ".join(lista)}')
+
+else:
+    print("lista vacia")
+
+## -----------------------------------------------------
+
+if not lista: # si NO hay elementos en mi lista == len(lista) <= 0
+    print("lista vacia")
+elif 'a' in lista:
+    print(f'esta lista contiene {"*+ ".join(lista)}') # [a, b, c] -> a*+ b*+ c
+
+# packaging/unpackaging
+#.         x  y z     0.  1
+lista = [(0, 15, 30), # (0, 15)
+        (-1, 30, 14),
+        (-3, 55, -200),
+        (-5, 48, 80)]
+# lista[0] = (0, 21)
+# matrices
+# esto es x del primer elemento
+print(f"esto es la x del elemento inicial de mi tupla {str(lista[0][0])}")
+print(f"esto es la y del elemento inicial de mi tupla {str(lista[0][1])}")
+print(f"esto es la x del elemento segundo de mi tupla {str(lista[1][0])}")
+print(f"esto es la y del elemento segundo de mi tupla {str(lista[1][1])}")
+
+#   0   - >        4 - 1
+for i in range(len(lista)):         #. [(), (), (), ()]
+    print("x", "y")                     
+    print(f'x = {str(lista[i][0])}, y = {str(lista[0][0][1])}, z ={str(lista[i][0][1])}')
+
+
+# range(4) ->      for i in 0,1,2,3:
+# iteracion 1 -> i = 0 posicion 0 de la lista
+# iteracion 2 -> i = 1 posicion 1 de la lista
+# ... 
+
+for x, y, z in lista: # Para cada elemento x, y  en lista imprime x= valor, y = valor
+    print(f'x = {str(x)},  y = {str(y)}, z = {str(z)}')
+
+
+
+
+
+
+# try, error 
+
+
 # decoradores

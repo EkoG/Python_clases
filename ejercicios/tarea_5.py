@@ -2,7 +2,13 @@
 # declares tres empleados y calcules de acuerdo a su tipo salario su pago mensual, semanal o quincenal
 class Empleado:
     # sugerencia: Crear metodo init primero
+    def __init__(self, tipo_pago: str) -> None:
+        self.pago_dict = {"mensual": 12, }
+
+        pass
     def calculo_siguiente_pago():
+        numero_pagos = self.pago_dict[self.tipo_pago] # 12, 24 y 52
+        return self.salario / numero_pagos
         #devolver calculo
         pass
 
