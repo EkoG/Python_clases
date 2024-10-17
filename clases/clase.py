@@ -226,9 +226,9 @@ elif 'a' in lista:
     print(f'esta lista contiene {"*+ ".join(lista)}') # [a, b, c] -> a*+ b*+ c
 
 # packaging/unpackaging
-#.         x  y z     0.  1
+#.         x  y  z      0.  1
 lista = [(0, 15, 30), # (0, 15)
-        (-1, 30, 14),
+        (-1, 30, None),
         (-3, 55, -200),
         (-5, 48, 80)]
 # lista[0] = (0, 21)
@@ -242,7 +242,7 @@ print(f"esto es la y del elemento segundo de mi tupla {str(lista[1][1])}")
 #   0   - >        4 - 1
 for i in range(len(lista)):         #. [(), (), (), ()]
     print("x", "y")                     
-    print(f'x = {str(lista[i][0])}, y = {str(lista[0][0][1])}, z ={str(lista[i][0][1])}')
+#    print(f'x = {str(lista[i][0])}, y = {str(lista[0][0][1])}, z ={str(lista[i][0][1])}')
 
 
 # range(4) ->      for i in 0,1,2,3:
@@ -253,11 +253,58 @@ for i in range(len(lista)):         #. [(), (), (), ()]
 for x, y, z in lista: # Para cada elemento x, y  en lista imprime x= valor, y = valor
     print(f'x = {str(x)},  y = {str(y)}, z = {str(z)}')
 
+# regex expressions ->  f'string {variable}'
+# import re
+# *
+
+
+# Extraccion transformacion y cargo(load)
+
+# Unpackaging arguments 
+
+def numbers (*args): # *args -> (a, 33102990, c, d, )
+    token = args[0]
+    numero_telefono =  args[1]
+    return sum([number for number in args])
+
+#  ---
+def add(numero_1: int, numero_2: int):
+    return numero_1 + numero_2
+
+nums = [2, 3]
+#       0.  1
+#
+# [{},{},{},{},{[]:{},}]
+# print(add(nums[0], nums[1]))
+print(add(*nums)) # add((nums[0], nums[1])) tupla
+
+x, y = nums # Toma el primer valor de lista y asignalo a x. Toma el segundo valor de nums y asignalo a Y
+print(add(x, y))
+
+
+
+nums_2 = (3, 3) # tupla
+print(add(*nums_2))
+
+
+numero_x, numero_y = nums_2 # desempaquetar
+
+print(add(numero_x, numero_y))
+# otra forma
 
 
 
 
 
+nums_dict = {"x": 5, "y": 6}
+# print(add(**nums_dict))
+
+# Unpackaging key arguments
+
+def named(**kwargs):
+    print(kwargs)
+
+# print(named(name="lorenzo", age="mateo"))
 # try, error 
 
 
