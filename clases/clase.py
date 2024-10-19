@@ -308,4 +308,54 @@ def named(**kwargs):
 # try, error 
 
 
+# REPASO asignaciones:
+
+nombre = "Celia"  #Global
+
+print(nombre)
+                    # local
+def separador_letras(nombre: str) -> list: # Celia
+    letras = []
+    for letra in nombre: # C e l i a
+        letras.append(letra)
+    return letras # -> ["C", "e", "l", "i", "a"]
+
+nombre = "Joe"
+print(separador_letras(nombre)) # -> ["J", "o", "e"]
+
+class Persona:
+    def __init__(self, nombre: str, edad: int):
+        self.nombre = nombre
+        self.edad = edad
+    
+    def separador_letras(self) -> list: # Celia
+        letras = []
+        for letra in self.nombre: # C e l i a
+            letras.append(letra)
+        return letras # -> ["C", "e", "l", "i", "a"]
+
+nombre = "Celia"
+edad = 27
+celia = Persona(nombre, edad) # Objeto de la clase persona
+print(celia.separador_letras()) # ["C", "e", "l", "i", "a"]
+
+# try:
+
+def separador_letras(nombre: str) -> list: # Celia
+    try:
+        letras = []
+        for letra in nombre: # C e l i a
+            letras.append(letra)
+        return letras # -> ["C", "e", "l", "i", "a"]
+    except Exception as error:
+        return f'Error is: {error}'
+
+nombre = None
+print(separador_letras(nombre))
+# Codigo que hace más cosas 100 
+
+for _ in range(100): # [0, ... 99]
+    print("hola mundo")
+# TRY and Except
+
 # decoradores
